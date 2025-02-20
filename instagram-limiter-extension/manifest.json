@@ -2,15 +2,18 @@
     "manifest_version": 3,
     "name": "Instagram Usage Limiter",
     "version": "1.0",
-   "permissions": [
-    "storage",
-    "browsingData",
-    "alarms",
-    "webRequest",
-    "webRequestBlocking",
-    "*://www.instagram.com/*",
-    "*://www.snapchat.com/*"
-],
+    "permissions": [
+        "storage",
+        "browsingData",
+        "alarms",
+        "declarativeNetRequest",
+        "*://www.instagram.com/*",
+        "*://www.snapchat.com/*"
+    ],
+    "host_permissions": [
+        "*://www.instagram.com/*",
+        "*://www.snapchat.com/*"
+    ],
     "background": {
         "service_worker": "background.js"
     },
@@ -21,6 +24,5 @@
             "48": "icons/icon48.png"
         },
         "default_title": "Social Media Limiter"
-
     }
 }
