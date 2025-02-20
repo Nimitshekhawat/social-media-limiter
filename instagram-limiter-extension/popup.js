@@ -1,15 +1,15 @@
-document.getElementById("setTimer").addEventListener("click", () => {
-  const time = parseInt(document.getElementById("timeInput").value, 10);
+document.getElementById("setTimerButton").addEventListener("click", () => {
+  const time = parseInt(document.getElementById("timerInput").value, 10);
   if (!isNaN(time) && time > 0) {
     chrome.runtime.sendMessage(
-      { action: "setTimer", time: time },
+      { action: "updateTimer", time: time },
       (response) => {
-        if (response.status === "Timer set successfully") {
-          alert(`Timer set for ${time} minutes.`);
+        if (response && response.status === "Timer updated successfully") {
+          alert(`Timer updated to ${time} minutes.`);
         }
       }
     );
   } else {
-    alert("Please enter a valid number of minutes.");
+    alert("Please enter a valid number greater than 0.");
   }
 });

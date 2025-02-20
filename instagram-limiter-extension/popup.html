@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Settings</title>
+    <title>Social Media Limiter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 200px;
+            padding: 10px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 5px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Set Time Limit</h1>
-    <input type="number" id="timeInput" placeholder="Enter time in minutes">
-    <button id="updateTimer">Update Timer</button>
+    <h3>Set Timer (minutes)</h3>
+    <input type="number" id="timerInput" min="1" max="120" />
+    <button id="setTimerButton">Set Timer</button>
+
     <script src="popup.js"></script>
 </body>
 

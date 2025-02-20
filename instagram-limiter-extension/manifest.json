@@ -1,18 +1,17 @@
 {
     "manifest_version": 3,
-    "name": "Instagram Usage Limiter",
+    "name": "Social Media Usage Limiter",
     "version": "1.0",
     "permissions": [
         "storage",
         "browsingData",
         "alarms",
-        "declarativeNetRequest",
-        "*://www.instagram.com/*",
-        "*://www.snapchat.com/*"
+        "cookies",
+        "webNavigation"
     ],
     "host_permissions": [
-        "*://www.instagram.com/*",
-        "*://www.snapchat.com/*"
+        "https://www.instagram.com/*",
+        "https://www.snapchat.com/*"
     ],
     "background": {
         "service_worker": "background.js"
