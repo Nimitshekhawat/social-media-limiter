@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Instagram Usage Limiter",
+    "version": "1.0",
+   "permissions": [
+    "storage",
+    "browsingData",
+    "alarms",
+    "webRequest",
+    "webRequestBlocking",
+    "*://www.instagram.com/*",
+    "*://www.snapchat.com/*"
+],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "./icon16.png",
+            "48": "./icon.png"
+        }
+    }
+}
